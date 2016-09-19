@@ -19,16 +19,19 @@ var todojs = (function() {
   }
 
   function _bindEvents() {
-    $addTaskButton.on('click', submitTask);
+    $addTaskButton.on('click', _submitTask);
+    $addTaskInput.on('keypress', _submitTask);
   }
 
   function _resetInputField() {
     $addTaskInput.val('');
   }
 
-  function submitTask() {
-    var taskText = $addTaskInput.val();
-    addTask(taskText);
+  function _submitTask(e) {
+    if (e.type == 'click' | e.which == 13) {
+      var taskText = $addTaskInput.val();
+      addTask(taskText);
+    }
   }
 
   function addTask(taskText) {
