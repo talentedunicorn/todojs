@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<!-- Icons -->
+	<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<defs>
+	<symbol id="icon-check_box" viewBox="0 0 24 24">
+	<title>check_box</title>
+	<path class="path1" d="M9.984 17.016l9-9-1.406-1.453-7.594 7.594-3.563-3.563-1.406 1.406zM18.984 3c1.125 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.891 2.016-2.016 2.016h-13.969c-1.125 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.891-2.016 2.016-2.016h13.969z"></path>
+	</symbol>
+	<symbol id="icon-check_box_outline_blank" viewBox="0 0 24 24">
+	<title>check_box_outline_blank</title>
+	<path class="path1" d="M18.984 3c1.078 0 2.016 0.938 2.016 2.016v13.969c0 1.078-0.938 2.016-2.016 2.016h-13.969c-1.078 0-2.016-0.938-2.016-2.016v-13.969c0-1.078 0.938-2.016 2.016-2.016h13.969zM18.984 5.016h-13.969v13.969h13.969v-13.969z"></path>
+	</symbol>
+	</defs>
+	</svg>
+<!-- /Icons -->
+
   <header class="w-100 pa2 bg-light-red">
     <h1 class="tc"><a class="link white" href="/">Todo.js</a></h1>
   </header>
@@ -23,7 +38,13 @@
       <ul id="taskList" class="list pl0 ml0">
         <script id="taskTemplate" type="text/template">
           {{#tasks}}
-            <li class="task pa2 ba bw1 b--gray br2 mb1">{{.}}</li>
+            <li class="task pa2 ba bw1 b--gray br2 mb1 cf">
+              <span class="db fl mr1">
+                <svg class="icon icon-check_box_outline_blank"><use xlink:href="#icon-check_box_outline_blank"></use></svg>
+                <svg class="icon icon-check_box hide"><use xlink:href="#icon-check_box"></use></svg>
+              </span>
+              <span class="w-80 db fl">{{.}}</span>
+            </li>
           {{/tasks}}
         </script>
       </ul>
