@@ -40,10 +40,10 @@
           {{#tasks}}
             <li class="task pa2 ba bw1 b--gray br2 mb1 cf">
               <span class="db fl mr1">
-                <svg class="icon icon-check_box_outline_blank"><use xlink:href="#icon-check_box_outline_blank"></use></svg>
-                <svg class="icon icon-check_box hide"><use xlink:href="#icon-check_box"></use></svg>
+                <svg class="icon icon-check_box_outline_blank status-undone"><use xlink:href="#icon-check_box_outline_blank"></use></svg>
+                <svg class="icon icon-check_box status-done"><use xlink:href="#icon-check_box"></use></svg>
               </span>
-              <span class="w-80 db fl">{{.}}</span>
+              <span class="task-text w-80 db fl">{{.}}</span>
             </li>
           {{/tasks}}
         </script>

@@ -12,3 +12,19 @@
 .hide {
   display: none;
 }
+
+.task .status-done {
+  display: none;
+}
+
+.task.done .status-done {
+  display: block;
+}
+
+.task.done .status-undone {
+  display: none;
+}
+
+.task.done .task-text {
+  text-decoration: line-through;
+}

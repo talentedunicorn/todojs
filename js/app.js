@@ -21,6 +21,7 @@ var todojs = (function() {
   function _bindEvents() {
     $addTaskButton.on('click', _submitTask);
     $addTaskInput.on('keypress', _submitTask);
+    $taskList.delegate('.icon', 'click', toggleStatus);
   }
 
   function _resetInputField() {
@@ -41,6 +42,11 @@ var todojs = (function() {
     }
     _resetInputField();
   }
+
+  function toggleStatus(e) {
+    $(e.target).parents('.task').toggleClass('done');
+  }
+
 
   return {
     addTask: addTask,
