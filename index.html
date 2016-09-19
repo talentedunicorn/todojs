@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo.js</title>
+  
+  <link rel="stylesheet" href="node_modules/tachyons/css/tachyons.min.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="w-100 pa2 bg-light-red">
+    <h1 class="tc"><a class="link white" href="/">Todo.js</a></h1>
+  </header>
+  <div class="container w-100 pa2">
+
+    <div class="w-30 center mv4">
+      <div class="task-form cf">
+        <input type="text" id="task-input" placeholder="add task" class="fl w-80 pa2 ba bw1 b--blue outline-0">
+        <button id="add-task" class="fl w-20 pa2 bg-blue white ba bw1 b--blue outline-0">Add</button>
+      </div>
+
+      <ul class="task-list list pl0 ml0">
+        <li class="task pa2 ba bw1 b--gray br2 mb1">No tasks...add something</li>
+        <script type="text/template">
+          {{#tasks}}
+          <li class="task">{{.}}</li>
+          {{/tasks}}
+        </script>
+      </ul>
+    </div>
+  </div>
+  
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

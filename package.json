@@ -1,0 +1,20 @@
+{
+  "name": "todojs",
+  "version": "1.0.0",
+  "description": "To do list module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30",
+    "tachyons": "^4.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "mustache": "^2.2.1"
+  }
+}
