@@ -14,17 +14,16 @@
   </header>
   <div class="container w-100 pa2">
 
-    <div class="w-30 center mv4">
+    <div id="taskModule" class="w-30 center mv4">
       <div class="task-form cf">
-        <input type="text" id="task-input" placeholder="add task" class="fl w-80 pa2 ba bw1 b--blue outline-0">
-        <button id="add-task" class="fl w-20 pa2 bg-blue white ba bw1 b--blue outline-0">Add</button>
+        <input type="text" id="taskInput" placeholder="add task" class="fl w-80 pa2 ba bw1 b--blue outline-0">
+        <button id="addTaskButton" class="fl w-20 pa2 bg-blue white ba bw1 b--blue outline-0">Add</button>
       </div>
 
-      <ul class="task-list list pl0 ml0">
-        <li class="task pa2 ba bw1 b--gray br2 mb1">No tasks...add something</li>
-        <script type="text/template">
+      <ul id="taskList" class="list pl0 ml0">
+        <script id="taskTemplate" type="text/template">
           {{#tasks}}
-          <li class="task">{{.}}</li>
+            <li class="task pa2 ba bw1 b--gray br2 mb1">{{.}}</li>
           {{/tasks}}
         </script>
       </ul>
@@ -32,6 +31,7 @@
   </div>
   
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/mustache/mustache.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
